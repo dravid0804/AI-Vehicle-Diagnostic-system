@@ -1,0 +1,105 @@
+:root {
+  --bg: #ffffff;
+  --text: #000;
+  --primary: #0d6efd;
+  --bubble-user: #0d6efd;
+  --bubble-bot: #e9f1ff;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --text: #fff;
+  --bubble-bot: #1e293b;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header */
+.header {
+  background: var(--primary);
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Messages */
+#messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+/* Chat bubbles */
+.msg {
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.user {
+  background: var(--bubble-user);
+  color: white;
+  margin-left: auto;
+}
+
+.bot {
+  background: var(--bubble-bot);
+}
+
+/* Suggestions */
+#suggestions {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+/* DIM + LIGHT EFFECT */
+#suggestions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 20px;
+  background: rgba(13,110,253,0.2);
+  color: var(--text);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#suggestions button:hover {
+  background: #0d6efd;
+  color: white;
+}
+
+/* Input */
+.input-area {
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+input {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  outline: none;
+}
+
+button {
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 15px;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car AI Chatbot</title>
+<link rel="stylesheet" href="css/stylebot.css">
+<link rel="stylesheet" href="css/navbar.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <nav class="navbar">
+
+    <h1 class="text-xl font-bold">
+        <h1 class="text-xl font-bold flex items-center gap-2">
+            <img src="car.png" alt="car" style="height:40px; width:40px;">
+            AI Vehicle Diagnostics
+            </h1>
+    
+    <div class="nav-links">
+    
+      <a href="index.html">🏠︎ Home</a>
+      <a href="upload.html">⛶ Scan Image</a>
+      <a href="odometer.html">🕰 Odometer AI</a>
+      <a href="map.html">📍Nearby Services</a>
+      <a href="chatbot.html">⛶AI Assistant</a>
+      <a href="about.html">ⓘ About Us</a>
+      <a href="contactus.html">🗪 Contact Us</a>
+    
+    </div>
+    
+    </nav>
+
+  <!-- Messages -->
+  <div id="messages"></div>
+
+  <!-- Suggestions -->
+  <div id="suggestions">
+    <button onclick="quickAsk(this)">What is turbocharger?</button>
+    <button onclick="quickAsk(this)">SUV vs Sedan</button>
+    <button onclick="quickAsk(this)">Engine knocking</button>
+    <button onclick="quickAsk(this)">Low mileage reasons</button>
+  </div>
+
+  <!-- Input -->
+  <div class="input-area">
+    <input id="input" placeholder="Ask anything about cars..." />
+    <button onclick="send()">➤</button>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+<script src="js/scriptchat.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Vehicle Diagnostics</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+
+body{
+background: linear-gradient(135deg,#eef2ff,#f8fafc);
+font-family: "Segoe UI", sans-serif;
+overflow:hidden;
+}
+
+/* animated scanning line */
+
+.scanline{
+position:absolute;
+width:100%;
+height:4px;
+background:#3b82f6;
+animation:scan 4s infinite;
+opacity:0.6;
+}
+
+@keyframes scan{
+0%{top:0}
+50%{top:100%}
+100%{top:0}
+}
+
+.glow{
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+</style>
+
+</head>
+
+
+<body class="flex items-center justify-center h-screen">
+
+<div class="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center px-8">
+
+<!-- LEFT CONTENT -->
+
+<div>
+
+<h1 class="text-6xl font-bold text-gray-800 mb-6 leading-tight">
+
+AI Powered  
+Vehicle Diagnostics
+
+</h1>
+
+<p class="text-gray-600 text-lg mb-10">
+
+Advanced artificial intelligence analyzes vehicle images to detect visible damage,
+classify severity, and provide repair recommendations instantly.
+
+</p>
+
+<a href="home.html"
+class="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition">
+
+Enter Platform
+
+</a>
+
+</div>
+
+
+
+<!-- RIGHT VISUAL -->
+
+<div class="relative">
+
+<img
+src="https://images.unsplash.com/photo-1503376780353-7e6692767b70"
+class="rounded-xl glow"
+/>
+
+<div class="scanline"></div>
+
+</div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<div class="absolute bottom-6 text-gray-500 text-sm">
+
+AI Vehicle Diagnostics © 2026
+
+</div>
+
+</body>
+
+</html>

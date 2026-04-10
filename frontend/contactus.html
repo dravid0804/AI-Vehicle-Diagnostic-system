@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Contact Us</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/navbar.css">
+
+<!-- EmailJS -->
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar">
+
+    <h1 class="text-xl font-bold flex items-center gap-2">
+        <img src="car.png" alt="car" style="height:40px; width:40px;">
+        AI Vehicle Diagnostics
+        </h1>
+    
+    <div class="nav-links">
+    
+        <a href="index.html">🏠︎ Home</a>
+        <a href="upload.html">⛶ Scan Image</a>
+        <a href="odometer.html">🕰 Odometer AI</a>
+        <a href="map.html">📍Nearby Services</a>
+        <a href="chatbot.html">⛶AI Assistant</a>
+        <a href="about.html">ⓘ About Us</a>
+        <a href="contactus.html">🗪 Contact Us</a>
+    
+    </div>
+    
+    </nav>
+
+
+<!-- Contact Form -->
+
+<div class="pt-28 pb-16 flex justify-center px-6">
+
+<div class="glass p-10 w-full max-w-xl">
+
+<h1 class="text-3xl font-bold mb-6 text-center">
+Contact Us
+</h1>
+
+<p class="text-gray-600 mb-6 text-center">
+If you have any questions, feedback, or suggestions regarding the AI Vehicle Diagnostics platform, feel free to contact us using the form below.
+</p>
+
+<form id="contactForm" class="space-y-4">
+
+<input
+type="text"
+id="name"
+placeholder="Your Name"
+class="w-full p-3 border rounded"
+required
+>
+
+<input
+type="email"
+id="email"
+placeholder="Your Email"
+class="w-full p-3 border rounded"
+required
+>
+
+<textarea
+id="message"
+placeholder="Write your message..."
+class="w-full p-3 border rounded h-32"
+required
+></textarea>
+
+<button
+type="submit"
+class="btn w-full"
+>
+Send Message
+</button>
+
+</form>
+
+<p id="statusMsg" class="text-center mt-4 text-green-600"></p>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* initialize emailjs */
+
+(function(){
+emailjs.init("YOUR_PUBLIC_KEY");
+})();
+
+
+document.getElementById("contactForm").addEventListener("submit",function(e){
+
+e.preventDefault()
+
+emailjs.send("YOUR_SERVICE_ID","YOUR_TEMPLATE_ID",{
+
+from_name:document.getElementById("name").value,
+from_email:document.getElementById("email").value,
+message:document.getElementById("message").value
+
+}).then(function(){
+
+document.getElementById("statusMsg").innerText="Message sent successfully!"
+
+})
+
+})
+
+</script>
+<footer class="text-center p-6 text-gray-400">
+
+    © 2026 AI Vehicle Diagnostics
+    
+    </footer>
+
+</body>
+
+</html>
